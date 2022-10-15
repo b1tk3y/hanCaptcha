@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  backend: &backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    volumes:
+      - ./backend:/app
+    command: python manage.py runserver 0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db: &db
+    image: postgres:14.5-alpine
+    container_name: db
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "54321:5432"
+    volumes:
+      - hancaptcha-db-data:/var/lib/postgresql/data
+
+volumes:
+  hancaptcha-db-data:
+

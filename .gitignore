@@ -1,0 +1,14 @@
+__pycache__/
+.env
+.env.*
+!.env.test
+backend/.coverage
+backend/htmlcov
+backend/media
+backend/static/*
+!backend/static/.gitkeep
+.idea
+.tox/
+*.bak
+*.pyc
+.env.test

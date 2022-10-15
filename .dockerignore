@@ -1,0 +1,23 @@
+# general
+.env
+.git
+*.log
+env
+.vscode
+*.test
+.idea
+
+# Python project
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache
