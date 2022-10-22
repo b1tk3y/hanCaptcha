@@ -20,6 +20,8 @@
 - Postgresql
 
 ## 실행
+- `cp sample.env .env`
+- `.env` 파일 수정
 - `make up` 또는 `docker-compose up -d`
 - 자세한 건 [hanCaptcha 만들기](https://sokuricat.com/browse/@b1tk3y/hancaptcha-%EB%A7%8C%EB%93%A4%EA%B8%B0-7ed9/%EC%86%8C%EA%B0%9C-f405) 참고
 
